@@ -1,3 +1,5 @@
+/* Styles for desktop screens */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Montserrat:wght@100;400;900&display=swap");
 * {
   margin: 0;
@@ -8,6 +10,7 @@
 html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -65,7 +68,7 @@ a {
   text-decoration: none;
   width: 60px;
   height: auto;
-  top: 8px;
+  top: -12px;
   right: calc(50% - 30px);
 }
 
@@ -73,6 +76,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 
 .hidden-pc {
@@ -88,6 +92,7 @@ a {
 
 #home {
   text-align: center;
+  height: auto;
 }
 
 .booking-strip {
@@ -102,9 +107,9 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  /* position: absolute;
+  position: absolute;
   top: 62%;
-  left: 20%; */
+  left: 20%;
 }
 
 .date {
@@ -180,7 +185,7 @@ a {
 
 .Col {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
 }
@@ -211,7 +216,7 @@ a {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: baseline;
   flex-wrap: wrap;
 }
@@ -226,4 +231,183 @@ a {
   font-size: 1rem;
   font-weight: 600;
   padding-bottom: 1rem;
+}
+
+/* Media queries for mobile screens */
+@media (max-width: 767px) {
+  .hidden-pc {
+    display: block;
+  }
+
+  .hidden-mb {
+    display: none;
+  }
+
+  .landing-img {
+    padding: 20% 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .booking-strip {
+    padding: 1rem;
+    z-index: 1;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    position: static;
+  }
+
+  .date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: none;
+  }
+
+  .date label,
+  .date input {
+    margin: 0.5rem;
+  }
+
+  .checkinout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-right: none;
+  }
+
+  .checkinout label {
+    margin: 0.5rem;
+  }
+
+  .availability {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .best-price {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    color: #d8751a;
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
+
+  .gallery {
+    padding: 30px 5px;
+    background-color: #f0f0f0;
+  }
+
+  .image {
+    width: 100%;
+    height: 600px;
+  }
+
+  .about {
+    padding: 40px 0px;
+  }
+
+  .Col {
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    flex-direction: column;
+  }
+
+  .Col img {
+    width: 400px;
+    height: auto;
+    padding: 0 0.2rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+
+  .footer h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+
+  #footer {
+    padding: 30px 5px 5px 5px;
+    text-align: justify;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link {
+    padding: 0 1rem;
+    height: auto;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .book-now {
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    border: #d8751a 1px solid;
+    text-decoration: none;
+    background-color: transparent;
+    color: #d8751a;
+    font-weight: 600;
+  }
+
+  .logo {
+    position: absolute;
+    text-decoration: none;
+    width: 60px;
+    height: auto;
+    top: 8px;
+    right: calc(50% - 30px);
+  }
+
+  .collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    flex-direction: column;
+  }
+}
+
+/* Media queries for tablet screens */
+@media (min-width: 768px) and (max-width: 1023px) {
 }
