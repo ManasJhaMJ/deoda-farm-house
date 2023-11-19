@@ -279,7 +279,7 @@ a {
 
   .checkinout {
     display: flex;
-    justify-content: flex-start;
+    justify-content: normal;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 1rem;
