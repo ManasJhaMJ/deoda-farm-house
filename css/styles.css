@@ -262,6 +262,8 @@ a {
     flex-wrap: wrap;
     align-items: center;
     border-radius: 5px;
+    top: 40%;
+    left: 20%;
     position: static;
   }
 
@@ -416,4 +418,39 @@ a {
 
 /* Media queries for tablet screens */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .booking-strip {
+    padding: 1.5rem;
+    z-index: 0;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    position: static;
+  }
+}
+
+/* Media queries for smaller laptop screens */
+@media (min-width: 1024px) and (max-width: 1441px) {
+  .booking-strip {
+    padding: 0 5rem;
+    z-index: 2;
+    width: 65%;
+    height: 80px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 46%;
+    left: 20%;
+  }
 }
